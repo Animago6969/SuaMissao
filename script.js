@@ -21,10 +21,11 @@ const perguntas = [
     },
 
         {
-            enunciado: "pergunta 3",
+            enunciado: "Quais as causas das desigualdades sociais? A educação pode conscientizar sobre Fake News e Desigualdade Social?
+",
             alternativas [
-                "alternativa1",
-                "alternativa2"
+                "Distribuição de renda e baixa qualificação profissional. A educação pode ser a ferramenta para conscientizar a sociedade.",
+                "Falta de acessibilidade e utilização adequada da tecnologia para a qualificação profissional. A educação não interfere na conscientização da sociedade."
             ]
         }
 
