@@ -30,7 +30,12 @@ const perguntas = [
         }
 
 ];
+
+let perAtual = 0;
+let perguntaAtual;
+
 function mostra_pergunta() {
+    perguntaAtual = perguntas[perAtual];
     caixaPerguntas.textContent = perguntas[0].enunciado ;  
 } ;
 
