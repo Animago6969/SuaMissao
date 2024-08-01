@@ -36,11 +36,18 @@ let perguntaAtual;
 
 function mostra_pergunta() {
     perguntaAtual = perguntas[perAtual];
-    caixaPerguntas.textContent = perguntas[0].enunciado ;  
+    caixaPerguntas.textContent = perguntas[0].enunciado ;
+    caixaAlternativas.textContent = "";
+    mostraAlternativas ();  
 } ;
 
 mostra_pergunta();
 
- 
+ function mostraAlternativas(){
+    for(const alternativas of perguntaAtual.alternativas)
+        const BotaoAlternativas = document.createElement("button");
+    botao.BotaoAlternativas.textContent = alternativas
+    caixaAlternativas.appendChild(BotaoAlternativas);
+ }
 
 
