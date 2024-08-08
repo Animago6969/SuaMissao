@@ -44,10 +44,10 @@ function mostra_pergunta() {
 mostra_pergunta();
 
  function mostraAlternativas(){
-    for(const alternativas of perguntaAtual.alternativas)
+    for(const alternativas of perguntaAtual.alternativas){
         const BotaoAlternativas = document.createElement("button");
-    botao.BotaoAlternativas.textContent = alternativas
+    BotaoAlternativas.textContent = alternativas
     caixaAlternativas.appendChild(BotaoAlternativas);
  }
-
+ };
 
