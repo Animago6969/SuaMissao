@@ -61,20 +61,31 @@ const perguntas = [
 
 let perAtual = 0;
 let perguntaAtual;
+let historiaFinal ="";
 
 function mostra_pergunta() {
     perguntaAtual = perguntas[perAtual];
     caixaPerguntas.textContent = perguntas[0].enunciado ;
     caixaAlternativas.textContent = "";
+    caixaResultado.textContent = "";
     mostraAlternativas ();  
 } ;
 
 mostra_pergunta();
 
+function opcaoSelecionada (opcaoSelecionada){
+    const afirmacao = opcaoSelecionada.afirmacao;
+    historiaFinal = afirmacao;
+    perguntaAtual ++;
+    mostra_pergunta();
+}
+
+
  function mostraAlternativas(){
     for(const alternativas of perguntaAtual.alternativas){
         const BotaoAlternativas = document.createElement("button");
     BotaoAlternativas.textContent = alternativas.texto;
+    BotaoAlternativas.addEventListener("click",() => opcaoSelecionada(alternativas));
     caixaAlternativas.appendChild(BotaoAlternativas);
  }
  };
