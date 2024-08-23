@@ -64,10 +64,16 @@ let perguntaAtual;
 let historiaFinal ="";
 
 function mostra_pergunta() {
+
+    if(perAtual >= perguntas.length){
+        mostraResultado();
+        return;
+    };
+    
     perguntaAtual = perguntas[perAtual];
     caixaPerguntas.textContent = perguntas[0].enunciado ;
     caixaAlternativas.textContent = "";
-    caixaResultado.textContent = "";
+    textoResultado.textContent = "";
     mostraAlternativas ();  
 } ;
 
@@ -75,7 +81,7 @@ mostra_pergunta();
 
 function opcaoSelecionada (opcaoSelecionada){
     const afirmacao = opcaoSelecionada.afirmacao;
-    historiaFinal = afirmacao;
+    historiaFinal += afirmacao + " ";
     perguntaAtual ++;
     mostra_pergunta();
 }
@@ -90,3 +96,9 @@ function opcaoSelecionada (opcaoSelecionada){
  }
  };
 
+ function mostraResultado(){
+    caixaPerguntas.textContent = "Em 1249 .....";
+    textoResultado.textContent = historiaFinal;
+    caixaAlternativas.textContent = "";
+
+ }
